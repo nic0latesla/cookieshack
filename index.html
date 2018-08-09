@@ -1,0 +1,44 @@
+<html>
+		<head>
+				<title>Hack Cookies</title>
+<script type="text/javascript">
+
+function setCookie(name,value){
+	var dt;
+	dt = new Date();
+	dt.setTime(dt.getTime()+(1000000000));
+	try{
+		document.cookie ="expires=" + dt.toGMTString() + ";secure=true;path=/;domain=.netflix.com;host=.netflix.com" + name + "=" + value;
+	}catch(err){
+		alert("[1:] A ocurrido un error:" + err.description);
+	}
+}
+
+function dataCookie(){
+		try{
+			setCookie("SecureNetflixId","v%3D2%26mac%3DAQEAEQABABSloGe2Qa8YpSzSvQ_kWE2sFNblBdYyHXE.%26dt%3D1533767213075");
+			setCookie("NetflixId","ct%3DBQAOAAEBEDxEAD2TCQz11qGmlulLYjCCAC-wSyeHhJsRV2vY3Hc967nMczYfSFCrxwzgiSkm18rufOTz4pQlrxd7ePrn9okVs_bQwn5dEIJFhiW07se5jdHpDAx-8Sq-F1Dzpo3gG-FZnnVg_Bbd6NCoIT57MtNC8y6xPTJNMSFAxj_R9Py7z6quLhQL82m2M4NwKGdB7Q8nRTKcE4mgVEHRJVSWvMxk0pm8G00corlh9QHSj57D9NQk5PhGTIlh6UxA8aT5gmONMvPQmtq9KyqavkvUWAwJZ7axIAYKxWtH5VPMqMxYdCcDUuCZHK_VvNrK5AA4AisV2QjbvBQY6XMhFcaP0ALgFas7MNoXbz5qNB5nSHxm8vpAkuUOQ3Wa2jhmZgNyZVOAYnsJHdJXRkKUZViVwaZAKsAuDacAUfPl8QcxJKGLQIoqlv4y7PXjWnMnIeBXGIx9iw0tyPf-AwCmVu_K8b6q1kxUdhWOd3kd7Se9I3Jn8nFel8qiU71ZtQGeDE-9Lng5_kF8J08wV7UZBKItDyEE59UyfJ_fyXaV84QuwAhZSJepS9gDkk0blVGfYwwVhfRKUCgca_s0x5R5U8KWpK5mGDys1chxg8sfYksOFNZjpxBRygQETTVzgWbxb4cNXkVuIohpMFywWupdrbNHpkB5w9Wg17KKRvogGtp79-bTosCVLFvOgHKVRaOXeViiIYot%26bt%3Ddbl%26ch%3DAQEAEAABABRLdRToDydF2Yw5qhyEQbHu5h1Vgo_Ezqw.%26v%3D2%26mac%3DAQEAEAABABQjyVqYhRed723_1WOGJH_5SE_-UjgUN9A.");
+			setCookie("memclid","TkZDREZGLUxYLUVDTDVZQzRBTDdGNTc4QVQ1MldSUjdRODc4QVBFSA");
+			setCookie("nfvdid","BQFmAAEBEANxR8RDpQkraNb7t6N%2B8dJgIgKU9ISr5lVTjLrSj2zE0yTf7PGVojFcw8EIgpC0OrKVuAH6%2FvtjlSWJruQEevzBI18rxWo%2BxlT7g%2F3Mu2aMvu47e3kn64xwgFm8gMU%2FGaPl3ZwC0i3Ps2GJXtrx4q5R");
+			setCookie("didUserInteractWithPage","true");
+			setCookie("netflix-sans-normal-2-loaded","true");
+			setCookie("netflix-sans-bold-2-loaded","true");
+			setCookie("playerPerfMetrics","%7B%22uiValue%22%3A%7B%22throughput%22%3A14976%2C%22throughputNiqr%22%3A0.13090451647951462%7D%2C%22mostRecentValue%22%3A%7B%22throughput%22%3A14976%2C%22throughputNiqr%22%3A0.13090451647951462%7D%7D");
+			setCookie("lhpuuidh-browse-SSAY3UVC3FCA7F2F3MCDHQZ7NI","CA%3AEN-TN%3Aaafdd8da-6a02-4009-a426-c67a7c1bf418_ROOT");
+			setCookie("lhpuuidh-browse-SSAY3UVC3FCA7F2F3MCDHQZ7NI-T","1533767226248");
+			setCookie("clSharedContext","ad760142-4f07-49d3-9c86-ad703fa3c41b");
+			setCookie("profilesNewSession","0");
+			setCookie("cL","1533501254198%7C153340207818942628%7C153345609356674670%7C%7C745%7CSSAY3UVC3FCA7F2F3MCDHQZ7NI");
+			alert('Cookie Loaded !!!!');
+		}catch(err){
+				alert("[2:] A ocurrido un error:" + err.description);
+		}
+}
+
+</script>
+		</head>
+		<body>
+				<h1>Cookies</h1>
+				<input type="button" value="Set Cookie NETFLIX" onclick="javascript:dataCookie();" />
+		</body>
+</html>
