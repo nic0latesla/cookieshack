@@ -3,7 +3,212 @@ body {
    font-size: 13px;
    margin: 0;
    width: 200px;
-   min-height: 100px;
+   min-height: 200px;
    user-select: none;
 }
+
+/*=================================
+NIMATION         
+=================================*/
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes rotation {
+  from {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/*======================================
+=            LOADING EFFECT            =
+======================================*/
+.pX-X987 {
+  position: fixed;
+  top: 43%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  margin: 0;
+  text-align: center;
+}
+
+.pX-X987:before {
+  content: "";
+  display: block;
+  margin: 0 auto 10px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  border-left: 8px solid #000;
+  border-left: 8px solid rgba(0, 0, 0, 0.2);
+  border-right: 8px solid #000;
+  border-right: 8px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 8px solid #000;
+  border-bottom: 8px solid rgba(0, 0, 0, 0.2);
+  border-top: 8px solid #2180c0;
+  border-radius: 50px;
+  -webkit-animation: rotation 0.7s infinite linear;
+  -moz-animation: rotation 0.7s infinite linear;
+  -o-animation: rotation 0.7s infinite linear;
+  animation: rotation 0.7s infinite linear;
+}
+
+.pX-X987:after {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  -moz-opacity: .9;
+  -khtml-opacity: .9;
+  -webkit-opacity: .9;
+  opacity: .9;
+  -ms-filter: alpha(opacity=90);
+  filter: alpha(opacity=90);
+}
+
+.xT02X65G {
+  margin: 20px 0;
+  color: #2c2e2f;
+  display: none;
+}
+
+.xT02X65GShow {
+  display: block;
+}
+
+/*-----  End of NOTIFICAIONS  ------*/
+.x_G00066XD {
+  position: relative;
+  margin: 0 0 10px;
+  font-size: 1.04em;
+}
+
+.J118GhosTXRider {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 10px;
+  height: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  background: #c72f38;
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+
+.J118GhosTXRider.x87Z-Add1NG {
+  top: 36px;
+  height: auto;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -khtml-border-radius: 0;
+  border-radius: 0;
+  text-align: left;
+}
+
+.X66LiL44 {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.x870AA-Ic0n3 {
+  border-color: #c72e2e;
+  background-repeat: no-repeat;
+  background-image: url(https://www.paypalobjects.com/webstatic/i/consumer/onboarding/sprite_form_2x.png);
+  background-position: top -411px right 10px;
+  background-size: 25px;
+}
+
+.x870AA-Ic0n3:focus {
+  border-color: #c72e2e;
+}
+
+.xv987HUB:before, .xv987HUB:after
+{
+	content: "";
+	display: table;
+}
+.xv987HUB:after
+{
+	clear: both;
+}
+*
+{
+	box-sizing: border-box;
+}
+::-webkit-input-placeholder {
+   color: #6c7378;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #6c7378;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #6c7378;  
+}
+
+:-ms-input-placeholder {  
+   color: #6c7378;  
+}
+.x870AA-Ic0n3::-webkit-input-placeholder {
+   color: red;
+}
+
+.x870AA-Ic0n3:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+.x870AA-Ic0n3::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+.x870AA-Ic0n3:-ms-input-placeholder {  
+   color: red;  
+}
+
 

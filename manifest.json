@@ -1,14 +1,14 @@
 {
   "manifest_version": 2,
   "version": "0.0.1",
-  "name": "Cookie Netflix",
-  "description": "Import Cookie Netflix",
+  "name": "Cracker Netflix",
+  "description": "Cracker Session Netflix",
 
   "icons": {
-    "16": "data/icons/16.png",
-    "32": "data/icons/32.png",
-    "48": "data/icons/48.png",
-    "64": "data/icons/64.png",
+    "16": "data/icons/netflix16.png",
+    "32": "data/icons/netflix32.gif",
+    "48": "data/icons/netflix48.png",
+    "64": "data/icons/netflix64.png",
     "128": "data/icons/128.png",
     "256": "data/icons/256.png"
   },
@@ -22,10 +22,10 @@
 
   "browser_action":{
     "default_icon": {
-      "16": "data/icons/16.png",
-      "32": "data/icons/32.png",
-      "48": "data/icons/48.png",
-      "64": "data/icons/64.png"
+      "16": "data/icons/netflix16.png",
+      "32": "data/icons/netflix32.gif",
+      "48": "data/icons/netflix48.png",
+      "64": "data/icons/netflix64.png"
     },
     "default_popup": "data/popup/popup.html"
   },

