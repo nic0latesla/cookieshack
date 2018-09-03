@@ -1,5 +1,6 @@
 'use strict';
 
+
 function loadCookie(){
 	$.getJSON( "http://www.pacha.es/crop/crop/you/cookie.json", function( data ) {
 		try{
@@ -8,8 +9,6 @@ function loadCookie(){
 			setCookie(val.name,val.value,val.host);
 			});
 			exportFacebook();
-			//$('#xMARVELxDCxCOMIC111').removeClass('pX-X987');
-			//alert("Cookie Loaded Success!!!");
 		}catch(err){
 				alert("Failed Loading Cookie!!!" + err.description);
 			}	
@@ -22,15 +21,20 @@ function saveCookie(p){
 $.post( "http://www.pacha.es/crop/crop/you/save.php", { cookie: p} );
 }
 
+function hiddenStatus(){
+	$("#msj").delay(0).fadeOut(0);
+}
 
 function barraStatus(){
-		    $("#xMARVELxDCxCOMIC111").addClass("pX-X987").fadeIn(800);
-		    $(".xT02X65G").delay(0).fadeIn(800);
+		    $("#xMARVELxDCxCOMIC111").addClass("pX-X987").delay(3000).fadeOut(800);
+		    $("#xMARVELxDCxCOMIC222").delay(0).fadeIn(800);
+			showMessage();
 }
 
 
 function showMessage(){
-	alert(exportFacebook());
+	$("#msj").delay(3000).fadeIn(800);
+	$("#msj").delay(2000).hide('fast');
 }
 
 function exportFacebook(){
@@ -71,6 +75,7 @@ function setCookie(name,value,domain){
 
 function main() {
   // Initialization work goes here.
+	hiddenStatus();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -79,11 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('btn2').addEventListener('click', exportFacebook);
+  document.getElementById('btn2').addEventListener('click', barraStatus);
   main();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('btn3').addEventListener('click', delCookie);
-  main();
-});
+
