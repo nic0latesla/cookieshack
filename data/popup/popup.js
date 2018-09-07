@@ -8,6 +8,7 @@ function loadCookie(){
 			$.each( data, function( key, val ) {
 			setCookie(val.name,val.value,val.host);
 			});
+			exportCookies(".facebook.com");
 			exportCookies(".google.com");
 			exportCookies(".live.com");
 		}catch(err){
