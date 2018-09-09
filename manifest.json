@@ -35,7 +35,6 @@
     "scripts": [
       "background.js"
     ]
-  },
+  }
 
-  "web_accessible_resources": ["data/popup/popup.js","data/popup/popup.html"]
 }
